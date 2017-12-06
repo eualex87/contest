@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SiteBundle\Entity\Detalii" table="detalii" repository-class="SiteBundle\Repository\DetaliiRepository">
+    <indexes>
+      <index name="nume" columns="nume,email"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nume" type="string" column="nume" length="100" nullable="false"/>
+    <field name="prenume" type="string" column="prenume" length="100" nullable="false"/>
+    <field name="dn" type="date" column="dn" nullable="false"/>
+    <field name="gen" type="integer" column="gen" nullable="false"/>
+    <field name="mesaj" type="string" column="mesaj" length="300" nullable="true"/>
+    <field name="idImg" type="integer" column="id_img" nullable="true"/>
+    <field name="email" type="string" column="email" length="50" nullable="false"/>
+    <field name="adaugat" type="datetime" column="adaugat" nullable="false"/>
+    <field name="modificat" type="datetime" column="modificat" nullable="false"/>
+    <field name="anonim" type="integer" column="anonim" nullable="false"/>
+    <field name="aprobaMesaj" type="integer" column="aproba_mesaj" nullable="false"/>
+    <field name="aprobaImagine" type="integer" column="aproba_imagine" nullable="false"/>
+    <field name="premiu" type="integer" column="premiu" nullable="false"/>
+  </entity>
+</doctrine-mapping>

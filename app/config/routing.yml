@@ -1,0 +1,14 @@
+app:
+    resource: "@SiteBundle/Resources/config/routing.yml"
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+secured:
+    resource: @AdminBundle/Controller/
+    type:     annotation
+    prefix:   /admin/

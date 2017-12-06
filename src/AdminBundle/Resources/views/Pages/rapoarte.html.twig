@@ -1,0 +1,59 @@
+{% extends 'AdminBundle::layout.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Raport inscrieri
+        </div>
+        <div class="panel-body" style="min-height:300px;">
+            <div class="demo-container">
+                <div id="placeholder" class="demo-placeholder"></div>
+
+            </div>
+            <div class="demo-container">
+                <div id="placeholder2" class="demo-placeholder"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascript %}
+{{ parent() }}
+    <script>
+        $(document).ready( function(){
+            var data = [
+            	{ label: "Femei",  data: {{ inscrieriZi.femei }} },
+            	{ label: "Barbati",  data: {{ inscrieriZi.barbati }} }
+            ];
+
+
+            $.plot('#placeholder', data, {
+                series: {
+                    pie: {
+                        show: true
+                    }
+                }
+            });
+
+
+            var data2 = [ ["Vineri", {{ inscrieri[0].nr }}], ["Sambata", {{ inscrieri[1].nr }}], ["Duminica", {{ inscrieri[2].nr }}], ["Luni", {{ inscrieri[3].nr }}] ];
+
+            $.plot("#placeholder2", [ data2 ], {
+                series: {
+                    bars: {
+                        show: true,
+                        barWidth: 0.6,
+                        align: "center"
+                    }
+                },
+                xaxis: {
+                    mode: "categories",
+                    tickLength: 0
+                }
+            });
+
+        });
+    </script>
+{% endblock %}

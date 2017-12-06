@@ -1,0 +1,3 @@
+services:
+    prize.service:
+        class: AdminBundle\Service\PrizeService

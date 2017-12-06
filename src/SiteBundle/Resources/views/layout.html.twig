@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="{{ _charset }}" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>{% block title 'Life is funny' %}</title>
+    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css', absolute=true) }}" />
+    <link href="{{ asset('bundles/site/css/bootstrap.min.css', absolute=true) }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/site/css/style.css', absolute=true) }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/site/color/default.css', absolute=true) }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/site/css/jquery-ui.min.css', absolute=true) }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/site/css/jquery-ui.structure.min.css', absolute=true) }}" rel="stylesheet" media="screen">
+    {% block head %}{% endblock %}
+</head>
+<body>
+{% block body %}
+    <div class="menu-area">
+        <div id="dl-menu" class="dl-menuwrapper">
+            <button class="dl-trigger">Open Menu</button>
+            <ul class="dl-menu">
+                <li>
+                    <a href="#intro">La inceputuri</a>
+                </li>
+                <li><a href="#despre">Despre comunitate</a></li>
+                <li><a href="#regulament">Sa-ti zic cateva reguli</a></li>
+                <li><a href="#mesaje">Mesaje funny</a></li>
+                <li><a href="#poze">Poze funny</a></li>
+                <li><a href="#castigatori">Si tu poti fi aici</a></li>
+                <li><a href="#inscriere">Inscrie-te in comunitate!</a></li>
+                <li><a href="#contact">Contacteaza-ne</a></li>
+                {#<li>#}
+                    {#<a href="#">Sub Menu</a>#}
+                    {#<ul class="dl-submenu">#}
+                        {#<li><a href="#">Sub menu</a></li>#}
+                        {#<li><a href="#">Sub menu</a></li>#}
+                    {#</ul>#}
+                {#</li>#}
+            </ul>
+        </div><!-- /dl-menuwrapper -->
+    </div>
+
+    <!-- intro area -->
+    <div id="intro">
+        <div class="intro-text">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-12">
+
+                        <div class="brand">
+                            <h1><a href="#">Life is funny</a></h1>
+                            <div class="line-spacer"></div>
+                            <p><span>Join us!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- About -->
+    <section id="despre" class="home-section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="section-heading">
+                        <h2>Despre comunitate</h2>
+                        <p>Daca ai o poza cu tine intr-un tricou funny, o poza cu tine intr-o ipostaza funny (parca aici le-ar sta mai bine prietenilor <img src="{{ asset('bundles/site/img/emoticons/smiley-laughing.gif', absolute=true) }}" alt="smiley-laughing" />) sau pur si simplu un mesaj funny,
+                            care iti smulge macar un zambet de fiecare data cand il citesti, ar fi bine sa le impartasesti si cu noi, altfel...nu poti intra in comunitatea "Life is funny".
+                            Si ca sa incep cu inceputul, mai bine sa-ti spun ce gasesti aici: </p>
+                        <ul>
+                            <li>in fiecare ora gasesti un aparat foto "Time 4 fun", care se poate umple cu apa, dar daca vrei sa afli ce prieteni mai tin la tine, poti incerca cu cerneala <img src="{{ asset('bundles/site/img/emoticons/happy.gif', absolute=true) }}" alt="happy" /></li>
+                            <li> la finalul fiecarei saptamani, pe langa WEEKEND, mai primesti ceva bun, o rama foto digitala, viu colorata pe care, este recomandat, sa o tii la indemana cu pozele
+                            de pe acest site, pentru a avea un randament mai bun in...orice <img src="{{ asset('bundles/site/img/emoticons/smiley-laughing.gif', absolute=true) }}" alt="smiley-laughing" /></li>
+                            <li> si ca sa fim funny pana la capat incheiem concursul in luna iunie (cand o sa se incheie si disertatia) cu o camera "profi", abia lansata, DSLR DISERTATIE01110 TechnoFunny(mai multe detalii gasiti pe net).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="box-team wow bounceInDown" data-wow-delay="0.1s">
+                        <img src="{{ asset('bundles/site/img/premii/aparat-foto.png') }}" alt="" class="img-responsive" />
+                        <h4>Time 4 fun</h4>
+                        <p>In fiecare ora</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" data-wow-delay="0.3s">
+                    <div class="box-team wow bounceInDown">
+                        <img src="{{ asset('bundles/site/img/premii/broasca-foto.png') }}" alt="" class="img-responsive" />
+                        <h4>Rama foto digitala</h4>
+                        <p>In fiecare saptamana</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" data-wow-delay="0.5s">
+                    <div class="box-team wow bounceInDown">
+                        <img src="{{ asset('bundles/site/img/premii/veverita-foto.png') }}" alt="" class="img-responsive" />
+                        <h4>DISERTATIE01110 TechnoFunny DSLR</h4>
+                        <p>Marele premiu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="regulament" class="home-section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="section-heading">
+                        <h2>Sa-ti zic cateva reguli</h2>
+                        <p>Regulament de campanie</p>
+                        <div class="scroll">
+                            <h1 style="text-align: center;"><strong>Concurs &ldquo;Life is funny&rdquo; TechnoFunny 2015 </strong></h1>
+                            <p style="text-align: center;"><strong>TERMENI ŞI CONDIŢII</strong></p>
+                            <p style="text-align: center;">&nbsp;</p>
+                            <ol>
+                                <li><strong> PERIOADA DE CONCURS ŞI PARTICIPANŢI</strong></li>
+                            </ol>
+                            <p>1.1 Concursul se desfășoară &icirc;n perioada&nbsp;<strong>duminică, 10 Mai 2015</strong>, și&nbsp;<strong>luni, 15 Iunie 2015</strong>, denumită (&ldquo;<strong>Perioada promoțională</strong>&rdquo;).</p>
+                            <p>1.2 Toți participanții trebuie să aibă peste 18 ani și trebuie să fie rezidenți &icirc;n Rom&acirc;nia (&ldquo;<strong>Participant</strong>&rdquo;). Concursul se adreseaza doar pesroanelor peste 18 ani, inscrise in conditiile de mai sus, si nu pot participa persoane juridice, precum si organizatorii sau rudele acestora pana la gradul al patrulea-lea, inclusiv.</p>
+                            <p>1.3 Se consideră că toți participanții sunt de acord cu, și respectă termenii și condițiile campaniei.</p>
+                            <p>1.4 Nu vor fi inscrisi in concurs participantii cu poze si mesaje cu continut neadecvat, respectiv obscen, pornografic, injurios precum si orice alt continut ce poate fi asociat cu acestea, organizatorii rezervandu-si dreptul de a califica mesajul si/sau fotografia.</p>
+                            <ol start="2">
+                                <li><strong> CUM PUTEȚI PARTICIPA</strong></li>
+                            </ol>
+                            <p>2.1 Pentru a se inscrie, Participanții trebuie sa completeze formularul de inscriere din pagina de &ldquo;Inscrie-te&rdquo;, conform indicatiilor, pe toata perioada concursului, pana pe data de luni, 15 iunile 2015, la miezul noptii.</p>
+                            <p>2.2. Datele completate de Participanti sunt presupuse a corespunde realitatii, in caz contrar, acestia putand fi descalificati cel mai tarziu la ridicare premiului.</p>
+                            <p>&nbsp;</p>
+                            <p>2.3. Participantul trebuie să se &icirc;nregistreze on-line și să completeze numele, prenumele, adresa de email la care poate si contactat, data nasterii, cel putin un mesaj sau o imagine, de tip jpg/jpeg/gif/png care sa nu depaseasca 2 MB, si poate posta ca anonim prin bifare. Inscrierea este finalizata in momentul in care participantul bifeaza ca a luat la cunostiinta si este de acord cu termenii si conditiile acestuia. &Icirc;n urma &icirc;nregistrării participantul va fi informat de validarea inscrierii, urmand ca organizatorii sa anunte acest fapt si printr-un email.</p>
+                            <p>2.4 Organizatorii acorda premii in valoare de x lei, cate un premiu pe ora in valoare de y.1 lei, unul pe saptamana in valoare de z.1 lei si mare premiu in valoare de x,1 lei ce va fi acordat dupa incheierea inscrierilor.</p>
+                            <p>2.5. TechnoFunny nu va procesa nicio inscriere dacă aceasta este primită după ultima zi de primire a inscrierilor, respectiv după&nbsp;<strong>luni, 15 iunie 2015, p&acirc;nă la miezul nopții</strong>.</p>
+                            <p>2.6. Organizatorii nu accepta mai mult de o inscriere efectuata cu aceasi adresa de email.</p>
+                            <p>2.7. Concursul nu poate fi asociat cu un alt concurs prezent sau anterior al firmei TechnoFunny.</p>
+                            <ol start="5">
+                                <li><strong> AVERTIZĂRI</strong></li>
+                            </ol>
+                            <p>5.1. TechnoFunny nu va putea fi facut responsabil pentru incapacitatea de a acorda premiul/premiile, in cazul in care incapacitatea a fost cauzată de circumstanțe inevitabile care au condus la cazuri de forță majoră sub forma unui/unor evenimente care, fără a implica vina părților, au &icirc;mpiedicat onorarea acestei oferte sau onorarea ofertei &icirc;n termeni satisfăcători.</p>
+                            <p>5.2. TechnoFunny &icirc;și rezervă dreptul de a anula, de a modifica și/sau de a schimba &icirc;n orice moment condițiile concursului, fără a fi trasă la răspundere &icirc;n niciun fel.</p>
+                            <p>&nbsp;</p>
+                            <ol start="6">
+                                <li><strong> DATE</strong></li>
+                            </ol>
+                            <p>6.1. Acolo unde este cazul, orice date parvenite &icirc;n timpul promoției vor fi colaționate, accesate, procesate și stocate &icirc;n &icirc;ntregime, &icirc;n conformitate cu Legislația din Romania privind Protecția datelor.</p>
+                            <p>6.2. Dacă Participanții nu doresc ca informațiile lor de contact să fie folosite &icirc;n scopuri de marketing sau să fie contactați &icirc;n viitor de TechnoFunny cu privire la promoții similare, este bine ca aceștia să&nbsp;<strong>NU&nbsp;</strong>bifeze caseta atunci c&acirc;nd completează formularul de solicitare.</p>
+                            <p>&nbsp;</p>
+                            <ol start="7">
+                                <li><strong> LEGISLAȚIE ȘI JURISDICȚIE</strong></li>
+                            </ol>
+                            <p>7.1. Termenii și condițiile prezentei precum și oricare controverse rezultate din sau &icirc;n legătură cu acestea vor fi guvernate și interpretate &icirc;n conformitate cu legislația din Romania și vor face obiectul jurisdicției non-exclusive a instanțelor romanesti.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            </div>
+        </div>
+    </section>
+
+    <!-- spacer -->
+    <section id="spacer1" class="home-section spacer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="color-light">
+                        <h2 class="wow bounceInDown" data-wow-delay="1s"></h2>
+                        <p class="lead wow bounceInUp" data-wow-delay="2s"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="mesaje" class="home-section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="section-heading">
+                        <h2>Mesaje Funny</h2>
+                        {#<p>Est te congue scaevola comprehensam. No pri simul decore, in partem electram voluptatibus vel esse facer.</p>#}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="scroll">
+                    {% for msg in messages %}
+                        {% if msg.mesaj %}
+                            <div class="messages">
+                                <p style=''>{{ msg.mesaj }}</p>
+                                {% if msg.anonim == 1 %}
+                                    <span>~ Anonim * {{ ('now'|date('Y-m-d') - msg.dn|date('Y-m-d')) }} ani ~</span>
+                                {%  else %}
+                                    <span>~ {{ msg.prenume }} * {{ ('now'|date('Y-m-d') - msg.dn|date('Y-m-d')) }} ani ~</span>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works -->
+    <section id="poze" class="home-section bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="section-heading">
+                        <h2>Poze funny</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="scroll">
+                        <ul class="lb-album">
+                            {% for i in range(low=0, high=(images|length - 1), step=2) %}
+                                <li>
+                                    <a href="#image-{{ images[i].getId() }}">
+                                        <img height="150" width="150" src="{{ asset(images[i].getFolder()~'/'~images[i].getHash()) }}" alt="">
+                                        <span>+</span>
+                                    </a>
+                                    <div class="lb-overlay" id="image-{{ images[i].getId() }}">
+                                        <a href="#page" class="lb-close">X</a>
+                                        <img src="{{ asset(images[i].getFolder()~'/'~images[i].getHash()) }}" alt="" />
+                                        <div>
+                                            <h3>{{ ('now'|date('Y'))-(images[i+1].dn.date|date('Y')) }}&nbsp;ani</h3>
+                                            {% if images[i+1].getAnonim() %}
+                                                <p>Anonim</p>
+                                            {% else %}
+                                                <p>{{ images[i+1].getPrenume()|upper }}</p>
+                                            {% endif %}
+                                        </div>
+
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- spacer 2 -->
+    <section id="spacer2" class="home-section spacer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12  col-md-12">
+                    <div class="color-light">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="castigatori" class="home-section bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <div class="section-heading">
+                    <h2>Si tu poti fi aici!</h2>
+                    <p>Mai jos sunt niste oameni funny si norocosi <img src="{{ asset('bundles/site/img/emoticons/smiley-laughing.gif', absolute=true) }}" alt="smiley-laughing" /></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8" style="height: 500px;">
+            <table>
+                <tr class="win">
+                    <th>Premiul zilnic</th>
+                    <th>Premiul saptamanal</th>
+                    <th>Premiul final</th>
+                </tr>
+                <tr class="win">
+                        <td>
+                            {% for castigator in castigatori %}
+                                {% if castigator.getPremiu() == 1 %}
+                                    {{ castigator.getPrenume()|lower|capitalize ~' '~castigator.getNume()|lower|capitalize  }} <br/>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for castigator in castigatori %}
+                                {% if castigator.getPremiu() == 2 %}
+                                    {{ castigator.getPrenume()|lower|capitalize ~' '~castigator.getNume()|lower|capitalize  }} <br/>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for castigator in castigatori %}
+                                {% if castigator.getPremiu() == 3 %}
+                                    {{ castigator.getPrenume()|lower|capitalize ~' '~castigator.getNume()|lower|capitalize  }} <br/>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="spacer3" class="home-section spacer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="color-light">
+                        <h2 class="wow bounceInDown" data-wow-delay="1s"></h2>
+                        <p class="lead wow bounceInUp" data-wow-delay="2s"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="inscriere" class="home-section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="section-heading">
+                        <h2>Inscrie-te in comunitate!</h2>
+                        <p>Fii funny acum!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="error" style="color:red;"></div>
+                &nbsp;
+            </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    {{ form_start(form, {'attr': {'class': 'form-horizontal'}} ) }}
+                        {% for child in form|slice(0,6) %}
+                            <div class="form-group">
+                                {{ form_row(child) }}
+                            </div>
+                        {% endfor %}
+
+                        <div class="form-group">
+                            {{ form_row(form.required_sex) }}
+                            {{ form_row(form.anonymous) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_row(form.send) }}
+                        </div>
+                    {{ form_end(form) }}
+                    <div id="dialog-confirm" style="display: none;"></div>
+                    <div id="dialog-repeat" style="display: none;"></div>
+                    <div id="dialog-error" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="home-section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="section-heading">
+                        <h2>Contacteaza-ne</h2>
+                        <p></p>
+                        <p><img src="{{ asset('bundles/site/img/emoticons/phone.png', absolute=true) }}" alt="{phone}" />&nbsp (004) (0744) 333 222</p>
+                        <p><img src="{{ asset('bundles/site/img/emoticons/email.png', absolute=true) }}" alt="{phone}" />&nbsp lifeisfunny@technofunny.ro</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <h5>Suntem peste tot!</h5>
+                    <ul class="social-network">
+                        <li><a href="https://www.facebook.com/lifeisfunny543">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span></a>
+                        </li>
+                        <li><a href="https://twitter.com/lifeIsFunny543">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span></a>
+                        </li>
+                        <li><a href="https://ro.pinterest.com/andreearaduioan/">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+                            </span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {#<div class="container">#}
+        {#<div class="row">#}
+            {#<p><img src="{{ asset('bundles/site/img/emoticons/important.png', absolute=true) }}" alt="{important}" width="20"/>&nbsp Acest site este unul de test. Concursurile nu sunt reale. &nbsp<img src="{{ asset('bundles/site/img/emoticons/important.png', absolute=true) }}" alt="{important}" width="20"/></p>#}
+            {#<p><img src="{{ asset('bundles/site/img/emoticons/important.png', absolute=true) }}" alt="{important}" width="20"/>&nbsp Pentru sanatatea fizica si mentala este recomandat sa accesati site-ul zilnic.&nbsp<img src="{{ asset('bundles/site/img/emoticons/important.png', absolute=true) }}" alt="{important}" width="20"/></p>#}
+        {#</div>#}
+    {#</div>#}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Copyright &copy;2015 Life is funny. All rights reserved. By Ioana Radu</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+<script src="{{ asset('bundles/site/js/modernizr.custom.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/site/js/jquery.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/site/js/bootstrap.min.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/site/js/jquery.smooth-scroll.min.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/site/js/jquery.dlmenu.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/site/js/wow.min.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/site/js/custom.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+<script src="{{ asset('bundles/site/js/send.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/site/js/jquery-ui.min.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/site/js/tinymce/tinymce.min.js', absolute=true) }}"></script>
+</body>
+</html>
+

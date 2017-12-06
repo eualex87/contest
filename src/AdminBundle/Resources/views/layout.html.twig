@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="{{ asset('bundles/admin/css/bootstrap.css', absolute=true) }}" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="{{ asset('bundles/admin/css/font-awesome.css', absolute=true) }}" rel="stylesheet" />
+    <!-- MORRIS CHART STYLES-->
+    <link href="{{ asset('bundles/admin/js/morris/morris-0.4.3.min.css', absolute=true) }}" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="{{ asset('bundles/admin/css/custom.css', absolute=true) }}" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+    <link href="{{ asset('bundles/admin/css/lightbox.css', absolute=true) }}" rel="stylesheet" />
+
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ path('admin') }}">Admin</a>
+        </div>
+        <div style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 16px;">
+            Bun venit, {{ app.user.username }}!
+            <a href="{{ path('user_logout') }}" class="btn btn-danger square-btn-adjust">Logout</a>
+        </div>
+    </nav>
+    <!-- /. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+                <li>
+                    <a href="{{ path('admin') }}"><i class="fa fa-desktop fa-3x"></i>Aproba inscrieri</a>
+                </li>
+                <li>
+                    <a  href="{{ path('rapoarte') }}"><i class="fa fa-bar-chart-o fa-3x"></i>Rapoarte</a>
+                </li>
+                <li>
+                    <a  href="{{ path('extrageri') }}"><i class="fa fa-sitemap fa-3x"></i>Extrageri</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper" >
+        <div id="page-inner">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>{% block title %}{% endblock %}</h2>
+                </div>
+            </div>
+            <!-- /. ROW  -->
+            <hr />
+            <div class="row">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+    <!-- /. PAGE WRAPPER  -->
+</div>
+{% block javascript %}
+<!-- /. WRAPPER  -->
+<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+<!-- JQUERY SCRIPTS -->
+<script src="{{ asset('bundles/admin/js/jquery-1.10.2.js', absolute=true) }}"></script>
+<!-- BOOTSTRAP SCRIPTS -->
+<script src="{{ asset('bundles/admin/js/bootstrap.min.js', absolute=true) }}"></script>
+<!-- METISMENU SCRIPTS -->
+<script src="{{ asset('bundles/admin/js/jquery.metisMenu.js', absolute=true) }}"></script>
+<!-- MORRIS CHART SCRIPTS -->
+{#<script src="{{ asset('bundles/admin/js/morris/raphael-2.1.0.min.js', absolute=true) }}"></script>#}
+{#<script src="{{ asset('bundles/admin/js/morris/morris.js', absolute=true) }}"></script>#}
+<!-- CUSTOM SCRIPTS -->
+<script src="{{ asset('bundles/admin/js/custom.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/admin/js/chart/excanvas.min.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/admin/js/chart/jquery.flot.min.js', absolute=true) }}"></script>
+ <script src="{{ asset('bundles/admin/js/chart/jquery.flot.pie.js', absolute=true) }}"></script>
+    <script src="{{ asset('bundles/admin/js/chart/jquery.flot.categories.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/admin/js/lightbox.min.js', absolute=true) }}"></script>
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+<script src="{{ asset('bundles/admin/js/admin.js', absolute=true) }}"></script>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,97 @@
+{% extends 'AdminBundle::layout.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Extragere zilnica
+    </div>
+    <div class="panel-body" style="min-height:150px;">
+        <div class="col-md-4 col-sm-7 col-xs-7">
+            <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-red set-icon">
+                        <i class="fa fa-envelope-o"></i>
+                    </span>
+                <div class="text-box">
+                    <p class="main-text">{{ premiiZilnice.acordate }}</p>
+                    <p class="text-muted">Castigatori</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-7 col-xs-7">
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">{{ premiiZilnice.ramase }}</p>
+                    <p class="text-muted">Premii ramase</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Extragere saptamanala
+    </div>
+    <div class="panel-body" style="min-height:150px;">
+        <div class="col-md-4 col-sm-7 col-xs-7">
+            <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-red set-icon">
+                        <i class="fa fa-envelope-o"></i>
+                    </span>
+                <div class="text-box">
+                    <p class="main-text">{{ premiiSaptamanale.acordate }}</p>
+                    <p class="text-muted">Castigatori</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-7 col-xs-7">
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">{{ premiiSaptamanale.ramase }}</p>
+                    <p class="text-muted">Premii ramase</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Extragere finala
+    </div>
+    <div class="panel-body" style="min-height:150px;">
+        <div class="col-md-4 col-sm-7 col-xs-7">
+            <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-red set-icon">
+                        <i class="fa fa-envelope-o"></i>
+                    </span>
+                <div class="text-box">
+                    <p class="main-text">{{ premiuFinal.acordate }}</p>
+                    <p class="text-muted">Castigatori</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-7 col-xs-7">
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">{{ premiuFinal.ramase }}</p>
+                    <p class="text-muted">Premii ramase</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

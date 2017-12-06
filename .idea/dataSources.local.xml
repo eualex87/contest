@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - concurs@localhost" uuid="52165a62-e94f-4e82-ac89-452e318f89ec">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>concurs.*</schema-pattern>
+      <default-schemas>concurs.*</default-schemas>
+    </data-source>
+  </component>
+</project>

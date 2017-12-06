@@ -1,0 +1,56 @@
+{% extends 'AdminBundle::layout.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-blue set-icon">
+                    <i class="fa fa-bell-o"></i>
+                </span>
+        <div class="text-box">
+            <p class="main-text">{{ inscrieriNr }} Noi</p>
+            <p class="text-muted">Inscrieri</p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Tabel inscrieri noi
+        </div>
+        <div class="panel-body" style="max-height: 500px;">
+            <div class="table-responsive scroll" style="max-height: 400px;">
+                <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>Prenume</th>
+                        <th>Nume</th>
+                        <th>E-mail</th>
+                        <th>Mesaj</th>
+                        <th>Imagine</th>
+                        <th>Aproba</th>
+                    </tr>
+                    {% for i in range(low=0, high=(inscrieri|length - 1), step=2) %}
+                        <tr>
+                            <td>{{ i/2+1 }}</td>
+                            <td>{{ inscrieri[i].getPrenume() }}</td>
+                            <td>{{ inscrieri[i].getNume() }}</td>
+                            <td>{{ inscrieri[i].getEmail() }}</td>
+                            <td>{{ inscrieri[i].getMesaj() }}</td>
+                            <td>
+                                {% if inscrieri[i+1] %}
+                                    <a href="{{ asset(inscrieri[i+1].getFolder()~'/'~inscrieri[i+1].getHash()) }}" target="_blank" data-lightbox="image-{{ inscrieri[i+1].getId() }}" data-title="">
+                                        <img height="100" width="100" src="{{ asset(inscrieri[i+1].getFolder()~'/'~inscrieri[i+1].getHash()) }}" alt="">
+                                    </a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{{ path('aproba',{'id': inscrieri[i].getId()}) }}">Aproba</a>
+                                <a href="{{ path('refuza',{'id': inscrieri[i].getId()}) }}">Refuza</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

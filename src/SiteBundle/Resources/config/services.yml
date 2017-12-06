@@ -1,0 +1,7 @@
+services:
+    site.form:
+        class: SiteBundle\Form\SiteType
+
+    site.register:
+        class: SiteBundle\Service\RegisterService
+        arguments: [@doctrine.orm.entity_manager]

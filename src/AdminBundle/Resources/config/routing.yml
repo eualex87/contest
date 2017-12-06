@@ -1,0 +1,35 @@
+admin:
+    path: /admin
+    defaults: { _controller: AdminBundle:Admin:index }
+    options:
+          expose: true
+
+extrageri:
+    path: /admin/extrageri
+    defaults: { _controller: AdminBundle:Admin:extrageri }
+    options:
+          expose: true
+
+rapoarte:
+    path: /admin/raport
+    defaults: { _controller: AdminBundle:Admin:rapoarte }
+    options:
+          expose: true
+
+_secured:
+    resource: "@AdminBundle/Controller/SecurityController.php"
+    type:     annotation
+
+aproba:
+    pattern:  /admin/aproba/{id}
+    defaults: { _controller: AdminBundle:Admin:aproba }
+    requirements: {id: (\d+)}
+    options:
+        expose: true
+
+refuza:
+    pattern:  /admin/refuza/{id}
+    defaults: { _controller: AdminBundle:Admin:refuza }
+    requirements: {id: (\d+)}
+    options:
+        expose: true

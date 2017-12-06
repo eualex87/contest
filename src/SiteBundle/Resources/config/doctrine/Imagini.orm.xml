@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd" >
+  <entity name="SiteBundle\Entity\Imagini" table="imagini" repository-class="SiteBundle\Repository\ImaginiRepository">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nume" type="string" column="nume" length="100" nullable="false"/>
+    <field name="folder" type="string" column="folder" length="100" nullable="false"/>
+    <field name="hash" type="string" column="hash" length="200" nullable="false"/>
+    <field name="adaugat" type="datetime" column="adaugat" nullable="false"/>
+  </entity>
+</doctrine-mapping>
